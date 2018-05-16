@@ -97,6 +97,11 @@ public class SandLab
 		  grid[randRow + 1][randCol] = WATER;
 		  grid[randRow][randCol] = EMPTY;
 	  }
+	  else if(randRow + 1 < grid.length && grid[randRow][randCol] == WATER && grid[randRow + 1][randCol] == SAND)
+	  {
+		  grid[randRow + 1][randCol] = WATER;
+		  grid[randRow][randCol] = SAND;
+	  }
 	  else if(randDirection == 1 && randCol > 0 && grid[randRow][randCol] == WATER && grid[randRow][randCol - 1] == EMPTY)
 	  {
 		  grid[randRow][randCol - 1] = WATER;
